@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulário de contato e inscrição para a oficina de observação do céu.">
+  <title>Contato - Explorando o Sistema Solar</title>
+</head>
+<body>
+  <header>
+    <h1>Contato e inscrição</h1>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="planetas.html">Planetas</a></li>
+        <li><a href="observacao.html">Observação</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Inscrição na oficina de observação</h2>
+      <p>Preencha o formulário. Campos marcados com <strong>*</strong> são obrigatórios.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Dados pessoais</legend>
+          <p>
+            <label for="nome">Nome completo *</label><br>
+            <input type="text" id="nome" name="nome" required minlength="3" autocomplete="name">
+          </p>
+          <p>
+            <label for="email">E-mail *</label><br>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </p>
+          <p>
+            <label for="telefone">Telefone</label><br>
+            <input type="tel" id="telefone" name="telefone" pattern="[0-9()\s\-]{10,15}" placeholder="(66) 99999-9999" autocomplete="tel">
+          </p>
+          <p>
+            <label for="nascimento">Data de nascimento *</label><br>
+            <input type="date" id="nascimento" name="nascimento" required>
+          </p>
+          <p>
+            <label for="site">Seu site (opcional)</label><br>
+            <input type="url" id="site" name="site" placeholder="https://exemplo.com">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferências</legend>
+          <p>
+            <label for="planeta">Planeta favorito *</label><br>
+            <select id="planeta" name="planeta" required>
+              <option value="">Selecione</option>
+              <option value="mercurio">Mercúrio</option>
+              <option value="venus">Vênus</option>
+              <option value="terra">Terra</option>
+              <option value="marte">Marte</option>
+              <option value="jupiter">Júpiter</option>
+              <option value="saturno">Saturno</option>
+              <option value="urano">Urano</option>
+              <option value="netuno">Netuno</option>
+            </select>
+          </p>
+          <p>
+            <label for="participantes">Número de participantes (1 a 10)</label><br>
+            <input type="number" id="participantes" name="participantes" min="1" max="10" value="1">
+          </p>
+          <p>
+            <label for="nivel">Interesse em astronomia (1 a 5)</label><br>
+            <input type="range" id="nivel" name="nivel" min="1" max="5" value="3">
+          </p>
+          <p>
+            <label for="horario">Horário preferido</label><br>
+            <input type="time" id="horario" name="horario" min="18:00" max="23:00">
+          </p>
+          <p>
+            <label for="cor">Cor do seu crachá</label><br>
+            <input type="color" id="cor" name="cor" value="#3366cc">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Nível de experiência *</legend>
+          <p>
+            <input type="radio" id="iniciante" name="experiencia" value="iniciante" required>
+            <label for="iniciante">Iniciante</label>
+          </p>
+          <p>
+            <input type="radio" id="intermediario" name="experiencia" value="intermediario">
+            <label for="intermediario">Intermediário</label>
+          </p>
+          <p>
+            <input type="radio" id="avancado" name="experiencia" value="avancado">
+            <label for="avancado">Avançado</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Mensagem e termos</legend>
+          <p>
+            <label for="mensagem">Mensagem</label><br>
+            <textarea id="mensagem" name="mensagem" rows="5" cols="40" maxlength="500"></textarea>
+          </p>
+          <p>
+            <input type="checkbox" id="aceite" name="aceite" required>
+            <label for="aceite">Li e aceito os termos de participação *</label>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Enviar inscrição</button>
+          <button type="reset">Limpar</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>O formulário é apenas demonstrativo e não envia dados. Última revisão em <time datetime="2026-10-13">13/10/2026</time>.</p>
+    <p>Integrante do grupo: João Gabriel B. Boiko</p>
+  </footer>
+</body>
+</html>
